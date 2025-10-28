@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backend (Java/Maven)
+dashboard/target/
+dashboard/*.class
+dashboard/*.jar
+dashboard/*.war
+dashboard/*.ear
+dashboard/hs_err_pid*
+dashboard/.settings/
+dashboard/.project
+dashboard/.classpath
+dashboard/bin/
+
+# Frontend (Node/Vite)
+dashboard-frontend/node_modules/
+dashboard-frontend/dist/
+dashboard-frontend/build/
+dashboard-frontend/.vite/
+dashboard-frontend/.env.local
+dashboard-frontend/.env.*.local
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production

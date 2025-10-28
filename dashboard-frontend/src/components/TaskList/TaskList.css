@@ -1,0 +1,128 @@
+/**
+ * TaskList Component Styles
+ * 
+ * Layout: Vertical flex list
+ * 
+ * Colors:
+ * - Action button: Green (#4CAF50)
+ * - Task background: Light gray (#F9F9F9)
+ * - Completed tasks: Faded (opacity: 0.6) with strikethrough
+ * 
+ * Interactions:
+ * - Hover: Shadow effect for depth
+ * - Checkbox: Large (20x20px) for easy clicking
+ * - Delete button: Hidden until hover (opacity transition)
+ */
+.task-list h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-task button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-task button:hover {
+  background: #45a049;
+}
+
+.loading, .error, .empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  opacity: 0.6;
+}
+
+.task-item.completed .task-content h3 {
+  text-decoration: line-through;
+}
+
+.task-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-content h3 {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 16px;
+}
+
+.task-content p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.task-content small {
+  color: #999;
+  font-size: 12px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
