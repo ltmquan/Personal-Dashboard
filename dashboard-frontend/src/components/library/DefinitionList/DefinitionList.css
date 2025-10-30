@@ -1,0 +1,217 @@
+/**
+ * DefinitionList Component Styles
+ *
+ * Layout: Vertical list with cards
+ *
+ * Colors:
+ * - Add button: Green (#4CAF50)
+ * - Field badge: Light purple background
+ * - Definition background: Light gray (#F9F9F9)
+ *
+ * Interactions:
+ * - Hover: Shadow effect
+ * - Delete button: Hidden until hover
+ */
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #45a049;
+}
+
+.add-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+.loading,
+.error,
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.definitions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.definition-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.definition-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.definition-content {
+  flex: 1;
+}
+
+.definition-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.definition-content .term {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.definition-content .body {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.definition-content .summary {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.definition-content .formal-definition {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.definition-content .related-concepts {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.definition-content .field {
+  margin-bottom: 8px;
+}
+
+.field-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f3e5f5;
+  color: #7b1fa2;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.timestamps {
+  display: flex;
+  gap: 15px;
+}
+
+.timestamps small {
+  color: #999;
+  font-size: 12px;
+}
+
+.definition-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #f0f0f0;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  color: #666;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  color: #f44336;
+}

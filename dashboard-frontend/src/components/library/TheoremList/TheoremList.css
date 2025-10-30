@@ -1,0 +1,231 @@
+/**
+ * TheoremList Component Styles
+ *
+ * Layout: Search-based with full-page theorem display
+ *
+ * Colors:
+ * - Add button: Green (#4CAF50)
+ * - Field badge: Light blue background
+ * - Search results: Hover effect
+ *
+ * Interactions:
+ * - Real-time search
+ * - Clickable search results
+ * - Close button for theorem
+ */
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #45a049;
+}
+
+.add-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.search-result-item {
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.search-result-item:hover {
+  background: #e8e8e8;
+  border-color: #4CAF50;
+}
+
+.loading,
+.error,
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.theorem-display {
+  padding: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #d32f2f;
+}
+
+.theorem-content {
+  max-width: 900px;
+}
+
+.theorem-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.timestamps {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.timestamps small {
+  color: #999;
+  font-size: 13px;
+}
+
+.theorem-content .body {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.theorem-content .summary {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.theorem-content .statement {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.theorem-content .proof {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.theorem-content .field {
+  margin-bottom: 12px;
+}
+
+.field-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}

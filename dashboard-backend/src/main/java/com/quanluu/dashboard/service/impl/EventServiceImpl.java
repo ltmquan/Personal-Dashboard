@@ -1,5 +1,8 @@
 package com.quanluu.dashboard.service.impl;
 
+import com.quanluu.dashboard.constants.EntityType;
+import com.quanluu.dashboard.constants.ErrorCode;
+import com.quanluu.dashboard.exception.ResourceNotFoundException;
 import com.quanluu.dashboard.model.Event;
 import com.quanluu.dashboard.repository.EventRepository;
 import com.quanluu.dashboard.service.EventService;
@@ -34,7 +37,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event updateEvent(Long id, Event eventDetails) {
         Event event = eventRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Event not found with id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Event not found with id: " + id, EntityType.EVENT, ErrorCode.NOT_FOUND_WITH_ID));
         
         event.setTitle(eventDetails.getTitle());
         event.setDescription(eventDetails.getDescription());

@@ -22,7 +22,7 @@ import java.util.Set;
  * - body: Main content in markdown/LaTeX format
  * - contentType: Type of content (POST, THEOREM, DEFINITION, PAPER, PROBLEM)
  * - tags: Associated tags for categorization
- * - summary: Optional brief summary/abstract
+ * - referencedContentIds: IDs of other content items referenced by this content
  */
 @Entity
 @Table(name = "contents")
@@ -46,9 +46,6 @@ public class Content extends BaseEntity {
     @Column(name = "content_type", nullable = false)
     private ContentType contentType;
 
-    @Column(columnDefinition = "TEXT")
-    private String summary;
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "content_tags",
@@ -56,4 +53,12 @@ public class Content extends BaseEntity {
         inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
     private Set<Tag> tags = new HashSet<>();
+
+    @ElementCollection
+    @CollectionTable(
+        name = "content_references",
+        joinColumns = @JoinColumn(name = "source_content_id")
+    )
+    @Column(name = "target_content_id")
+    private Set<Long> referencedContentIds = new HashSet<>();
 }

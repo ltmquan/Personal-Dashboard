@@ -1,0 +1,229 @@
+/**
+ * PaperList Component Styles
+ *
+ * Layout: Vertical list with cards
+ *
+ * Colors:
+ * - Add button: Green (#4CAF50)
+ * - PDF button: Blue
+ * - Citation key: Code styling with gray background
+ * - Paper background: Light gray (#F9F9F9)
+ *
+ * Interactions:
+ * - Hover: Shadow effect
+ * - Delete button: Hidden until hover
+ */
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #45a049;
+}
+
+.add-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+.loading,
+.error,
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.papers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paper-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.paper-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paper-content {
+  flex: 1;
+}
+
+.paper-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.paper-content .authors {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.publication-info {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.venue {
+  color: #1976d2;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.year {
+  color: #666;
+}
+
+.paper-content .summary {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.paper-content .my-notes {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.citation-key code {
+  background: #e0e0e0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #333;
+}
+
+.timestamps {
+  display: flex;
+  gap: 15px;
+}
+
+.timestamps small {
+  color: #999;
+  font-size: 12px;
+}
+
+.paper-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.pdf-btn {
+  padding: 6px 12px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.pdf-btn:hover {
+  background: #1565c0;
+}
+
+.view-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #f0f0f0;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  color: #666;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  color: #f44336;
+}

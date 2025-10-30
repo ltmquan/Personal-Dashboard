@@ -12,5 +12,5 @@
   </div>
 </template>
 
-<script src="./Dashboard.js"></script>
-<style src="./Dashboard.css" scoped></style>
+<script src="./DashboardView.js"></script>
+<style src="./DashboardView.css" scoped></style>

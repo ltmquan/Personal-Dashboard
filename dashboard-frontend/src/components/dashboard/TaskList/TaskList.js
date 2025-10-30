@@ -1,4 +1,4 @@
-import taskService from '../../services/taskService'
+import taskService from '../../../services/taskService'
 
 export default {
   name: 'TaskList',

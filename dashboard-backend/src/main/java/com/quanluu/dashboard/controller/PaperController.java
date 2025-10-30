@@ -26,10 +26,8 @@ public class PaperController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get paper by ID")
-    public ResponseEntity<PaperDTO> getPaperById(@PathVariable Long id) {
-        return paperService.getPaperById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public PaperDTO getPaperById(@PathVariable Long id) {
+        return paperService.getPaperById(id);
     }
 
     @PostMapping

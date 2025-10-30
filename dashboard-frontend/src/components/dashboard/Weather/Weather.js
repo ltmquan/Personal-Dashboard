@@ -1,4 +1,4 @@
-import weatherService from '../../services/weatherService'
+import weatherService from '../../../services/weatherService'
 
 export default {
   name: 'Weather',

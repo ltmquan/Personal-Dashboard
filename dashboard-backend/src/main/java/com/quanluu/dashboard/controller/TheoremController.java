@@ -26,10 +26,22 @@ public class TheoremController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get theorem by ID")
-    public ResponseEntity<TheoremDTO> getTheoremById(@PathVariable Long id) {
-        return theoremService.getTheoremById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public TheoremDTO getTheoremById(@PathVariable Long id) {
+        return theoremService.getTheoremById(id);
+    }
+
+    @GetMapping("/search")
+    @Operation(summary = "Search theorems by keywords in title (comma-separated, returns max limit results)")
+    public List<TheoremDTO> searchTheorems(
+            @RequestParam String keywords,
+            @RequestParam(defaultValue = "5") Integer limit) {
+        return theoremService.searchTheoremsByTitleContaining(keywords, limit);
+    }
+
+    @GetMapping("/recent")
+    @Operation(summary = "Get most recent theorem")
+    public TheoremDTO getMostRecentTheorem() {
+        return theoremService.getMostRecentTheorem();
     }
 
     @PostMapping

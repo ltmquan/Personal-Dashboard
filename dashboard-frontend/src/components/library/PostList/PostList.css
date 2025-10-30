@@ -1,0 +1,164 @@
+/**
+ * PostList Component Styles
+ *
+ * Layout: Full-page continuous scroll layout
+ *
+ * Colors:
+ * - Add button: Green (#4CAF50)
+ * - Post background: White
+ *
+ * Interactions:
+ * - Delete button appears on hover
+ */
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #45a049;
+}
+
+.add-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+.loading,
+.error,
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.post-item {
+  padding: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.timestamps {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.timestamps small {
+  color: #999;
+  font-size: 13px;
+}
+
+.post-body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.post-item:hover .post-actions {
+  opacity: 1;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}

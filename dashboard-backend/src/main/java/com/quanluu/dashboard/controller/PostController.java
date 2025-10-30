@@ -26,10 +26,8 @@ public class PostController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get post by ID")
-    public ResponseEntity<PostDTO> getPostById(@PathVariable Long id) {
-        return postService.getPostById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public PostDTO getPostById(@PathVariable Long id) {
+        return postService.getPostById(id);
     }
 
     @PostMapping

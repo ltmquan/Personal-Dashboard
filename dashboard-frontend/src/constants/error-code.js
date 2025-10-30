@@ -1,0 +1,3 @@
+export const NOT_FOUND_WITH_ID = 'NOT_FOUND_WITH_ID'
+
+export const EMPTY_DATABASE = 'EMPTY_DATABASE'

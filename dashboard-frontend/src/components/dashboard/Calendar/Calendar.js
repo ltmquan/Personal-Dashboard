@@ -1,5 +1,5 @@
-import eventService from '../../services/eventService'
-import taskService from '../../services/taskService'
+import eventService from '../../../services/eventService'
+import taskService from '../../../services/taskService'
 
 export default {
   name: 'Calendar',

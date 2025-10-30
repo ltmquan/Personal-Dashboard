@@ -9,13 +9,10 @@ import lombok.AllArgsConstructor;
 /**
  * Metadata for definition-type content.
  *
- * Stores additional information specific to concept definitions,
- * including the term being defined and its field.
+ * Stores additional information specific to concept definitions.
  *
  * Fields:
- * - term: The term or concept being defined
  * - field: Academic field (e.g., "Complexity Theory", "Algorithms")
- * - formalDefinition: Formal mathematical definition (LaTeX supported)
  * - relatedConcepts: Comma-separated list of related concept names
  */
 @Entity
@@ -34,14 +31,8 @@ public class DefinitionMetadata extends BaseEntity {
     @JoinColumn(name = "content_id", nullable = false, unique = true)
     private Content content;
 
-    @Column(nullable = false, length = 200)
-    private String term;
-
     @Column(length = 200)
     private String field;
-
-    @Column(columnDefinition = "TEXT")
-    private String formalDefinition;
 
     @Column(length = 500)
     private String relatedConcepts;

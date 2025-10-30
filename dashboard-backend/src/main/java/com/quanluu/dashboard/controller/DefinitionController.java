@@ -26,10 +26,8 @@ public class DefinitionController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get definition by ID")
-    public ResponseEntity<DefinitionDTO> getDefinitionById(@PathVariable Long id) {
-        return definitionService.getDefinitionById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public DefinitionDTO getDefinitionById(@PathVariable Long id) {
+        return definitionService.getDefinitionById(id);
     }
 
     @PostMapping
